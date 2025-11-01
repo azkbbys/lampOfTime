@@ -39,7 +39,7 @@ function find(name:string){
 var Storage = storage.getGroupStorage('cundang'); // 获取数据库，名称为 cundang
 
 const CorrespondingName = { // 在此添加排行榜对应的单位和名称（无名称 则表示不显示名称）
-    'exp': [i18n.t('leaderboard.exp_unit'), '无名称'],
+    'exp': [i18n.t('leaderboard.pump_unit'), '无名称'],
     'fastest_time': ['', '无名称'],
 };
 
@@ -253,6 +253,7 @@ remoteChannel.onServerEvent(({entity, args, tick})=>{
 world.onPlayerJoin(async ({entity}) => { 
     await loadPlayer(entity);
     entity.player.enableDoubleJump = false;
+    entity.opened_pump=[];
     entity.timeleft=0
     dialog_with_button(entity,i18n.t('dialogs.welcome', { lng: entity.lang }),i18n.t('dialogs.joinwelcome', { lng: entity.lang, name: entity.player.name }),[i18n.t('dialogs.close', { lng: entity.lang })]);
     if(entity.canplay==false){
@@ -352,7 +353,7 @@ endGameArea.onEnter(({ entity }) => {
 world.onTick(({ tick }) => {
     if(tick%16==0){
         world.querySelectorAll('player').forEach(entity => { 
-            remoteChannel.sendClientEvent(entity, { type: 'tick', args: ['',entity.timeleft,lastmsg,entity.adminlevel,entity.exp] });
+            remoteChannel.sendClientEvent(entity, { type: 'tick', args: [entity.opened_pump.length,entity.timeleft,lastmsg,entity.adminlevel,entity.exp] });
             // entity.player.canFly=true
             if(entity.playing){
                 if(entity.timeleft>1){
@@ -378,8 +379,7 @@ world.onPress(async({button,entity})=>{
             options:[/*i18n.t('menu_options.language', {lng: entity.lang}),*/
                 i18n.t('dialogs.menu.redemption_code', {lng: entity.lang}),
                 i18n.t('dialogs.menu.data', {lng: entity.lang}),
-                i18n.t('dialogs.menu.leaderboard.exp', {lng: entity.lang}),
-                i18n.t('dialogs.menu.leaderboard.time', {lng: entity.lang}),
+                i18n.t('dialogs.menu.leaderboard.pump', {lng: entity.lang}),
                 i18n.t('dialogs.menu.gameui', {lng: entity.lang}),
                 i18n.t('dialogs.menu.skin', {lng: entity.lang}),
                 i18n.t('menu_options.shop', {lng: entity.lang}),
@@ -516,20 +516,11 @@ world.onPress(async({button,entity})=>{
                 }
             }
         }
-        else if(result.value==i18n.t('dialogs.menu.leaderboard.exp', {lng: entity.lang})){
+        else if(result.value==i18n.t('dialogs.menu.leaderboard.pump', {lng: entity.lang})){
             await entity.player.dialog({
                 type: GameDialogType.SELECT,
                 title: i18n.t('leaderboard.title', {lng: entity.lang}),
                 content: await leaderBoard('exp'),
-                options: [i18n.t('dialogs.confirm', {lng: entity.lang})]
-            });
-        }
-        else if(result.value==i18n.t('dialogs.menu.leaderboard.time', {lng: entity.lang})){
-            await dialog_with_button(entity, i18n.t('leaderboard.title', {lng: entity.lang}), i18n.t('leaderboard.time_note', {lng: entity.lang}), [i18n.t('dialogs.acknowledge', {lng: entity.lang})])
-            await entity.player.dialog({
-                type: GameDialogType.SELECT,
-                title: i18n.t('leaderboard.title', {lng: entity.lang}),
-                content: await leaderBoard('fastest_time'),
                 options: [i18n.t('dialogs.confirm', {lng: entity.lang})]
             });
         }
@@ -798,7 +789,6 @@ world.onPress(async({button,entity})=>{
                     i18n.t('dialogs.admin_tools.fly', {lng: entity.lang}),
                     i18n.t('dialogs.admin_tools.land', {lng: entity.lang}),
                     i18n.t('dialogs.admin_tools.noclip', {lng: entity.lang}),
-                    i18n.t('dialogs.admin_tools.switch_bgm', {lng: entity.lang}),
                     i18n.t('dialogs.admin_tools.teleport_player', {lng: entity.lang}),
                     i18n.t('dialogs.admin_tools.teleport_to_player', {lng: entity.lang}),
                     i18n.t('dialogs.admin_tools.timer', {lng: entity.lang}),

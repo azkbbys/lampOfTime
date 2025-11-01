@@ -37,7 +37,7 @@
         "dhm_already_used": "这个兑换码已经使用过了",
         "dhm_success_creeper": "兑换成功，获得皮肤：苦力怕\n右键皮肤库里可以使用",
         "dhm_success_steve": "兑换成功，获得皮肤：史蒂夫\n右键皮肤库里可以使用",
-        "dhm_success_exp": "兑换成功，获得{{exp}}经验",
+        "dhm_success_exp": "兑换成功，获得{{exp}}南瓜",
         "dhm_not_exist": "兑换码不存在",
         "ban": "封禁",
         "baninfo": "你已被封禁，无法进入游戏！10秒后自动踢出\n如有疑问请联系管理员",
@@ -53,12 +53,11 @@
         "purchase_permanent_success": "购买成功！请手动点击保存后重进地图，粒子效果就会生效啦~",
         "menu": {
             "menu": "菜单",
-            "basicinfo": "你有{{exp}}经验\n你已用时{{time}}秒\n你的血量：{{hp}}/{{maxhp}}\n你的坐标：{{position}}",
+            "basicinfo": "你有{{exp}}南瓜\n你已用时{{time}}秒\n你的血量：{{hp}}/{{maxhp}}\n你的坐标：{{position}}",
             "redemption_code": "兑换码",
             "data": "数据相关",
             "leaderboard": {
-                "exp": "经验排行榜",
-                "time": "时间排行榜"
+                "pump": "南瓜排行榜"
             },
             "gameui": "关于界面",
             "skin": "皮肤库"
@@ -94,7 +93,7 @@
         },
         "shop": {
             "title": "你要买点啥？",
-            "content": "你要买点啥？\n你有{{exp}}经验\n说明：名称（价格）（备注）",
+            "content": "你要买点啥？\n你有{{exp}}南瓜\n说明：名称（价格）（备注）",
             "green_particle": "永久绿色粒子效果（150exp）（全图同步）",
             "creeper_skin": "永久苦力怕皮肤（500exp）（全图同步）（鬼知道作者把皮肤做成了啥样）",
             "steve_skin": "永久史蒂夫皮肤（500exp）（全图同步）（还原度还是可以的吧）",
@@ -103,8 +102,8 @@
             "shrink_potion": "缩小药水（70exp）（一次性，将角色大小缩小50%，不可叠加使用）",
             "restore_potion": "还原药水（1exp）（一次性，将角色大小还原",
             "enlarge_potion": "放大药水（70exp）（一次性，将角色大小增大50%，不可叠加使用）",
-            "not_enough_exp": "经验不够！",
-            "not_enough_exp_or_owned": "经验不够或已拥有皮肤"
+            "not_enough_exp": "南瓜不够！",
+            "not_enough_exp_or_owned": "南瓜不够或已拥有皮肤"
         },
         "backpack": {
             "title": "你要使用啥？",
@@ -194,7 +193,7 @@
     },
     "leaderboard": {
         "title": "排行",
-        "exp_unit": "经验",
+        "pump_unit": "南瓜",
         "time_note": "注意：为了保证正确排序，10000-排行榜显示数据为真实用时",
         "rank_format": "第{{rank}}名 | {{name}} | {{value}} {{unit}}{{name_display}}"
     },
@@ -208,13 +207,13 @@
         "title_prefix": " [{{title}}] ",
         "purchase_green_particle": "{{name}} 购买了一次性绿色粒子效果体验！",
         "purchase_permanent_green_particle": "{{name}} 购买了永久绿色粒子效果！",
-        "purchase_exp": "{{name}} 购买了{{exp}}经验！"
+        "purchase_exp": "{{name}} 购买了{{exp}}南瓜！"
     },
     "logs": {
         "join": "加入",
         "purchase_green_particle": "购买了一次性绿色粒子效果体验",
         "purchase_permanent_green_particle": "购买了永久绿色粒子效果",
-        "purchase_exp": "购买了{{exp}}经验"
+        "purchase_exp": "购买了{{exp}}南瓜"
     },
     "client" : {
         "dimension" : "维度：",
@@ -222,6 +221,7 @@
         "time" : "剩余时间：",
         "message" : "世界消息：",
         "adminlevel" : "管理员等级（越高越好）：",
+        "collected": "已收集:",
         "exp" : "南瓜："
     },
     "lang" : "zh-CN"

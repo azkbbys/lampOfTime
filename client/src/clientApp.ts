@@ -28,7 +28,7 @@ const img1 = bg.findChildByName('image-1')as UiImage
 const zxcommand = command.findChildByName('image-2')as UiImage
 const cmdneirong = command.findChildByName('commandinput')as UiInput
 // 多语言适配
-text3.textContent = i18n.t('client.dimension');
+text3.textContent = i18n.t('client.collected');
 text5.textContent = i18n.t('client.time');
 text7.textContent = i18n.t('client.message');
 text9.textContent = i18n.t('client.adminlevel');
@@ -113,7 +113,7 @@ remoteChannel.events.on("client", (arg) => {
         img1.image = arg.args[2];
     }
     else if (arg.type == 'tick') {
-        text4.textContent = arg.args[0];
+        text4.textContent = String(arg.args[0]);
         text6.textContent = String(arg.args[1]);
         text8.textContent = arg.args[2];
         text10.textContent = String(arg.args[3]) + i18n.t('client.only_storage_included');

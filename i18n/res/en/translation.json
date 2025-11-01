@@ -3,5 +3,230 @@
   "welcome_ap": "Welcome to ArenaPro!",
   "navigator": {
     "language": "You are using {{language}}"
+  },
+  "chat": {
+    "purchase_exp": "{{name}} purchased {{exp}} pumpkin!",
+    "purchase_green_particle": "{{name}} purchased a one-time green particle effect experience!",
+    "purchase_permanent_green_particle": "{{name}} purchased the permanent green particle effect!",
+    "title_prefix": "[{{title}}]",
+    "victory": "Congratulations {{name}} for reaching the finish line in {{time}} seconds",
+    "welcome_join": "Welcome {{title}}{{name}} to join the Lamp of Time!\n\nCurrently online: {{online_count}} people"
+  },
+  "client": {
+    "adminlevel": "Admin level:",
+    "collected": "Collected:",
+    "exp": "pumpkin:",
+    "message": "World chats:",
+    "only_storage_included": "(storage admins only)",
+    "time": "time left:"
+  },
+  "dialogs": {
+    "acknowledge": "I already know",
+    "admin_tools": {
+      "broadcast": "Broadcast announcement",
+      "broadcast_confirm": "confirm broadcast",
+      "broadcast_content": "Enter broadcast content",
+      "broadcast_title": "Broadcast announcement",
+      "content": "Choose the tools you need to use",
+      "create_chat": "Create a temporary chat channel",
+      "create_chat_content": "Enter the IDs of all people you want to join, separated by spaces.",
+      "create_chat_title": "Create a temporary chat channel",
+      "destroy_chat": "Destroy temporary chat channel",
+      "destroy_chat_content": "Please select the temporary chat channel you want to destroy",
+      "destroy_chat_title": "choose",
+      "doc": "Administrator command documentation",
+      "fly": "flight",
+      "land": "landing",
+      "logs_content": "Log content:\n\n{{logs}}",
+      "logs_title": "log",
+      "noclip": "Turn on/off wall penetration",
+      "switch_bgm": "switch bgm",
+      "teleport_player": "player teleporter",
+      "teleport_player_content": "Who do you want to teleport to your location?",
+      "teleport_player_title": "Teleport to a player",
+      "teleport_to_player": "Teleport to a player",
+      "teleport_to_player_content": "Whose location do you want to teleport to?",
+      "teleport_to_player_title": "Teleport to a player",
+      "timer": "timer",
+      "timer_content": "How long do you want to time it?",
+      "timer_title": "timer",
+      "title": "Administrator tools",
+      "view_logs": "View log"
+    },
+    "author": "author",
+    "backpack": {
+      "content": "What are you going to use?\n\nWarning: Click to use immediately without confirmation\n\nPlease click X to exit",
+      "title": "What are you going to use?"
+    },
+    "ban": "ban",
+    "baninfo": "You have been banned and cannot enter the game! \nAutomatically kicked out after 10 seconds\n\nIf you have any questions, please contact the administrator",
+    "bug_report": "Please post your feedback in the comment area, or send it to the author's email address oyroyroyr@163.com. If adopted, you will be given green particle special effects on the map.",
+    "close": "closure",
+    "confirm": "confirm",
+    "dhm_already_used": "This redemption code has already been used",
+    "dhm_not_exist": "Redemption code does not exist",
+    "dhm_success_creeper": "Redeem successfully and get skin: Creeper\n\nYou can use it in the skin library by right-clicking",
+    "dhm_success_exp": "Redeem successfully and get {{exp}} pumpkin",
+    "dhm_success_steve": "Redeem successfully and get skin: Steve\n\nYou can use it in the skin library by right-clicking",
+    "error": "mistake",
+    "exit": "quit",
+    "fly_speed": {
+      "content": "Enter the flight speed and do not test the server limits",
+      "title": "Custom flight speed"
+    },
+    "gameui": {
+      "cancel": "Cancel operation",
+      "close": "Close gameUi",
+      "content": "Choose what you want to do",
+      "open": "Open gameUi",
+      "refresh": "Refresh gameUi size"
+    },
+    "joinwelcome": "{{name}}, welcome to the Lamp of Time!\n\nWhen you enter the challenge area, you need to collect enough pumpkins before the countdown ends to continue the jack-o'-lantern duration and return before the jack-o'-lantern burns out. Only in this way can the evacuation be considered successful and the score will be calculated.",
+    "menu": {
+      "basicinfo": "You have {{exp}} pumpkin\n\nYou have spent {{time}} seconds\n\nYour HP: {{hp}}/{{maxhp}}\n\nYour coordinates: {{position}}",
+      "data": "Data related",
+      "gameui": "About the interface",
+      "leaderboard": {
+        "pump": "Pumpkin Ranking"
+      },
+      "menu": "menu",
+      "redemption_code": "Redeem code",
+      "skin": "skin library"
+    },
+    "mute_chat": {
+      "content": "what do you want to say",
+      "title": "Ban players from talking",
+      "warning": "\"Warning! Non-banned players should try not to use it!\""
+    },
+    "purchase_permanent_success": "Purchase successful! \nPlease manually click save and then re-enter the map, the particle effect will take effect~",
+    "purchase_success": "Purchase successful!",
+    "redemption": {
+      "content": "Enter the redemption code you received\n\nThe redemption code can be obtained in Q group 763919859!",
+      "title": "exchange"
+    },
+    "restart_banned": "You are in lockdown and cannot come out",
+    "save_reminder": "Please click Save yourself, otherwise the author will not be responsible for data loss.",
+    "shop": {
+      "content": "What do you want to buy?\n\nYou have {{exp}} pumpkin\n\nDescription: Name (Price) (Remarks)",
+      "creeper_skin": "Permanent creeper skin (500exp) (full picture synchronized) (Who knows what the author made of the skin)",
+      "enlarge_potion": "Magnifying Potion (70exp) (one-time use, increases character size by 50%, cannot be used in combination)",
+      "fly_privilege": "One-time flight privilege (70exp) (turn on flight privilege and can only be used on one map! Validity period: 2s)",
+      "fly_speed": "Disposable flight speed changer (5exp) (change flight speed, can only be used on one map! Prerequisite for use: flight has been turned on)",
+      "green_particle": "Permanent green particle effect (150exp) (full image synchronized)",
+      "not_enough_exp": "Not enough pumpkin!",
+      "not_enough_exp_or_owned": "The pumpkin is not enough or already has a skin",
+      "restore_potion": "Restoration Potion (1exp) (one-time use, restore character size",
+      "shrink_potion": "Shrinking Potion (70exp) (one-time use, reduces character size by 50%, cannot be used in combination)",
+      "steve_skin": "Permanent Steve skin (500exp) (full picture synchronized) (the restoration is still OK)",
+      "title": "What do you want to buy?"
+    },
+    "skin": {
+      "content": "Please select a skin to use",
+      "title": "Select skin"
+    },
+    "storage": {
+      "content": "Here are the features of Storage, please choose:",
+      "delete": "❌Delete files",
+      "delete_cancel1": "uncertain",
+      "delete_cancel2": "never mind",
+      "delete_cancel3": "Didn't think about it",
+      "delete_cancel4": "Do not delete",
+      "delete_confirm": "Delete it",
+      "delete_confirm_content": "Are you sure you want to delete the file?\n\nAfter deleting the file, all data will disappear!\n\nCan't go back on my word!",
+      "delete_confirm_title": "Are you sure you want to delete the file?",
+      "save": "✔Archive",
+      "save_success": "Archive successful!\n\nEvery time you step on the save point, all data will be automatically saved.",
+      "title": "sql related"
+    },
+    "system": "system",
+    "uncrouch_banned": "You are in lockdown and cannot come out",
+    "welcome": "welcome"
+  },
+  "dimension": {
+    "black": "black",
+    "white": "white"
+  },
+  "directmsgs": {
+    "already_picked_pumpkin": "You have already picked up this pumpkin",
+    "closed": "Closed",
+    "data_created": "The data has been created for you!",
+    "data_loaded": "The data has been read for you!",
+    "enter_game_area": "The timer begins!",
+    "exitfail": "Evacuation failed! \nYou need to collect at least 5 pumpkins to evacuate!",
+    "exitsuccess": "Evacuation successful! \nYou collected {{pump_num}} pumpkins this round!",
+    "fly_disabled": "Successful landing",
+    "fly_enabled": "You are ready to fly",
+    "fly_privilege_used": "Used successfully, landed after 2 seconds",
+    "fly_speed_used": "Used successfully",
+    "infinite_fly_used": "Used successfully",
+    "opened": "Opened successfully",
+    "pickup_pumpkin": "You picked up a pumpkin, and the jack-o'-lantern lasts for {{time}} seconds!",
+    "potion_used": "Used successfully",
+    "purchase_success_backpack": "The purchase was successful and has been placed in the backpack",
+    "purchase_success_particle": "The purchase was successful and has been used automatically. It will take effect after refreshing.",
+    "purchase_success_skin": "The purchase is successful and has been put into the skin library. You can right-click \"Skin Library\" to use it.",
+    "refresh_not_supported": "Refresh is not currently supported, please refresh the web page.",
+    "restart_success": "Start over, timer reset!",
+    "switch_success": "Switch successful",
+    "teleport_success": "Transmission successful!",
+    "temp_chat_created": "Created successfully! \n{{users}}. \nThe ID is {{id}}",
+    "temp_chat_destroyed": "Destruction successful! \n{{id}}",
+    "time_left": "{{time}} seconds left!",
+    "time_up": "Time's up! \nIf you fail to evacuate successfully, your results will be invalid!",
+    "timer_max": "Timed up to 3 hours",
+    "timer_stopped": "The timer is off!",
+    "uncrouch_success": "Escape successfully!"
+  },
+  "items": {
+    "enlarge_potion": "One-time magnification potion",
+    "fly_privilege": "One-time flight privileges",
+    "fly_speed": "Disposable flight transmission",
+    "infinite_fly": "Infinite flight wings",
+    "restore_potion": "One-time restoration potion",
+    "shrink_potion": "One-time shrinking potion"
+  },
+  "lang": "en",
+  "language": {
+    "chinese": "Chinese",
+    "chinese_selected": "Simplified Chinese selected",
+    "default_selected": "The default language of this game is Simplified Chinese",
+    "english": "English",
+    "english_selected": "Successfully selected English",
+    "select_content": "🌐选择语言/Choose a language",
+    "select_title": "🌐选择语言/Choose a language"
+  },
+  "leaderboard": {
+    "pump_unit": "pumpkin",
+    "rank_format": "{{rank}} | {{name}} | {{value}} {{unit}}{{name_display}}",
+    "time_note": "Note: In order to ensure correct sorting, the data displayed in the 10000-ranking list is the actual time.",
+    "title": "ranking"
+  },
+  "logs": {
+    "join": "join in",
+    "purchase_exp": "Purchased {{exp}} pumpkin",
+    "purchase_green_particle": "Purchased a one-time green particle effect experience",
+    "purchase_permanent_green_particle": "Purchased the permanent green particle effect"
+  },
+  "menu_options": {
+    "admin_tools": "Administrator tools",
+    "attachment_select": "Select image",
+    "backpack": "Backpack",
+    "bug_report": "bug feedback",
+    "donate": "✨Use love to generate electricity!",
+    "language": "🌐languages/languages",
+    "mute_chat": "Ban players from talking",
+    "restart": "Start over",
+    "shop": "shop",
+    "switch_view": "Switch person",
+    "uncrouch": "Get out of stuck point"
+  },
+  "player_titles": {
+    "admin": "administrator",
+    "player": "player",
+    "senior_admin": "Senior Administrator"
+  },
+  "skins": {
+    "default": "Original skin",
+    "default_using": "Original"
   }
 }

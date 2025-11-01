@@ -216,7 +216,6 @@
         "purchase_exp": "购买了{{exp}}南瓜"
     },
     "client" : {
-        "dimension" : "维度：",
         "only_storage_included" : "(不包含代码管理员)",
         "time" : "剩余时间：",
         "message" : "世界消息：",

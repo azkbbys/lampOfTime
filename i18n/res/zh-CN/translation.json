@@ -1,0 +1,228 @@
+{
+    "directmsgs": {
+        "data_loaded": "已为您读取数据！",
+        "data_created": "已为您创建数据！",
+        "closed": "已关闭",
+        "opened": "开启成功",
+        "refresh_not_supported": "当前暂不支持刷新，请刷新网页即可",
+        "switch_success": "切换成功",
+        "purchase_success_particle": "购买成功，已自动使用，刷新后生效",
+        "purchase_success_skin": "购买成功，已放入皮肤库，可右键点击\"皮肤库\"使用",
+        "purchase_success_backpack": "购买成功，已放入背包",
+        "fly_privilege_used": "使用成功，2s后降落",
+        "fly_speed_used": "使用成功",
+        "potion_used": "使用成功",
+        "infinite_fly_used": "使用成功",
+        "restart_success": "重新开始，已重置计时器！",
+        "uncrouch_success": "脱离成功！",
+        "teleport_success": "传送成功！",
+        "timer_max": "计时最多3小时",
+        "timer_stopped": "计时器关闭！",
+        "temp_chat_created": "创建成功！{{users}}。ID为{{id}}",
+        "temp_chat_destroyed": "销毁成功！{{id}}",
+        "fly_enabled": "您可以飞行了",
+        "fly_disabled": "降落成功",
+        "enter_game_area": "计时开始！",
+        "time_left": "还剩 {{time}}秒！",
+        "time_up": "时间到！你没能成功撤离，成绩作废！",
+        "pickup_pumpkin" : "你捡起了一个南瓜，南瓜灯续时+{{time}}秒！",
+        "already_picked_pumpkin": "你已捡起过这个南瓜了",
+        "exitsuccess": "撤离成功！本轮你收集了{{pump_num}}个南瓜！",
+        "exitfail": "撤离失败！你至少需要收集5个南瓜才能撤离！"
+    },
+    "dialogs": {
+        "welcome": "欢迎",
+        "joinwelcome": "{{name}}，欢迎来到时之灯！\n当你进入挑战区域后，需要在倒计时结束之前收集足够的南瓜续南瓜灯的时长并在南瓜灯燃尽之前返回返回，这样才算成功撤离，成绩才会计算",
+        "error": "错误",
+        "dhm_already_used": "这个兑换码已经使用过了",
+        "dhm_success_creeper": "兑换成功，获得皮肤：苦力怕\n右键皮肤库里可以使用",
+        "dhm_success_steve": "兑换成功，获得皮肤：史蒂夫\n右键皮肤库里可以使用",
+        "dhm_success_exp": "兑换成功，获得{{exp}}经验",
+        "dhm_not_exist": "兑换码不存在",
+        "ban": "封禁",
+        "baninfo": "你已被封禁，无法进入游戏！10秒后自动踢出\n如有疑问请联系管理员",
+        "system": "系统",
+        "author": "作者",
+        "bug_report": "反馈问题请发在评论区，也可以发作者邮箱oyroyroyr@163.com，如果采纳会赠送地图绿色粒子特效",
+        "confirm": "确认",
+        "acknowledge": "我已知晓",
+        "close": "关闭",
+        "exit": "退出",
+        "save_reminder": "请自行点击保存，否则数据丢失作者不负责任",
+        "purchase_success": "购买成功！",
+        "purchase_permanent_success": "购买成功！请手动点击保存后重进地图，粒子效果就会生效啦~",
+        "menu": {
+            "menu": "菜单",
+            "basicinfo": "你有{{exp}}经验\n你已用时{{time}}秒\n你的血量：{{hp}}/{{maxhp}}\n你的坐标：{{position}}",
+            "redemption_code": "兑换码",
+            "data": "数据相关",
+            "leaderboard": {
+                "exp": "经验排行榜",
+                "time": "时间排行榜"
+            },
+            "gameui": "关于界面",
+            "skin": "皮肤库"
+        },
+        "redemption": {
+            "title": "兑换",
+            "content": "输入你所获得的兑换码\n兑换码可以在Q群763919859获得！"
+        },
+        "storage": {
+            "title": "sql相关",
+            "content": "这里是有关Storage的功能，请选择：",
+            "save": "✔存档",
+            "delete": "❌删档",
+            "delete_confirm_title": "你确定要删档吗？",
+            "delete_confirm_content": "你确定要删档吗？\n删档后一切数据将消失！\n不能反悔！",
+            "delete_cancel1": "不确定",
+            "delete_cancel2": "算了",
+            "delete_cancel3": "没想好",
+            "delete_cancel4": "不删",
+            "delete_confirm": "删了吧",
+            "save_success": "存档成功！\n每次踩到存档点会自动进行所有数据的保存"
+        },
+        "gameui": {
+            "content": "选择你要进行的操作",
+            "cancel": "取消操作",
+            "close": "关闭gameUi",
+            "open": "开启gameUi",
+            "refresh": "刷新gameUi大小"
+        },
+        "skin": {
+            "title": "选择皮肤",
+            "content": "请选择要使用的皮肤"
+        },
+        "shop": {
+            "title": "你要买点啥？",
+            "content": "你要买点啥？\n你有{{exp}}经验\n说明：名称（价格）（备注）",
+            "green_particle": "永久绿色粒子效果（150exp）（全图同步）",
+            "creeper_skin": "永久苦力怕皮肤（500exp）（全图同步）（鬼知道作者把皮肤做成了啥样）",
+            "steve_skin": "永久史蒂夫皮肤（500exp）（全图同步）（还原度还是可以的吧）",
+            "fly_privilege": "一次性飞行特权（70exp）（开启飞行权限，仅能在一个地图使用！有效期：2s）",
+            "fly_speed": "一次性飞行变速器（5exp）（更改飞行速度，仅能在一个地图使用！使用前提：已经开启飞行）",
+            "shrink_potion": "缩小药水（70exp）（一次性，将角色大小缩小50%，不可叠加使用）",
+            "restore_potion": "还原药水（1exp）（一次性，将角色大小还原",
+            "enlarge_potion": "放大药水（70exp）（一次性，将角色大小增大50%，不可叠加使用）",
+            "not_enough_exp": "经验不够！",
+            "not_enough_exp_or_owned": "经验不够或已拥有皮肤"
+        },
+        "backpack": {
+            "title": "你要使用啥？",
+            "content": "你要使用啥？\n警告：点击后立即使用无确认\n退出请点X"
+        },
+        "fly_speed": {
+            "title": "自定义飞行速度",
+            "content": "输入飞行速度，不要试探服务器极限"
+        },
+        "mute_chat": {
+            "title": "禁言玩家说话",
+            "content": "你想要说啥",
+            "warning": "“警告！非禁言玩家尽量不要使用！”"
+        },
+        "admin_tools": {
+            "title": "管理员工具",
+            "content": "选择你需要使用的工具",
+            "doc": "管理员命令文档",
+            "view_logs": "查看日志",
+            "create_chat": "创建临时聊天频道",
+            "destroy_chat": "销毁临时聊天频道",
+            "fly": "飞行",
+            "land": "降落",
+            "noclip": "开启/关闭穿墙",
+            "switch_bgm": "切换bgm",
+            "teleport_player": "玩家传送器",
+            "teleport_to_player": "传送至某玩家",
+            "timer": "计时器",
+            "broadcast": "广播公告",
+            "logs_title": "日志",
+            "logs_content": "日志内容：\n{{logs}}",
+            "create_chat_title": "创建临时聊天频道",
+            "create_chat_content": "输入所有要加入的人的id，空格分割",
+            "destroy_chat_title": "选择",
+            "destroy_chat_content": "请选择你要销毁的临时聊天频道",
+            "teleport_player_title": "传送至某玩家",
+            "teleport_player_content": "你要传送谁到你的位置",
+            "teleport_to_player_title": "传送至某玩家",
+            "teleport_to_player_content": "你要传送你到谁的位置",
+            "timer_title": "计时器",
+            "timer_content": "你想计时多久",
+            "broadcast_title": "广播公告",
+            "broadcast_content": "输入广播内容",
+            "broadcast_confirm": "确认广播"
+        },
+        "restart_banned": "你在封禁中，不能出来",
+        "uncrouch_banned": "你在封禁中，不能出来"
+    },
+    "language": {
+        "select_title": "🌐选择语言/Choose a language",
+        "select_content": "🌐选择语言/Choose a language",
+        "chinese": "中文",
+        "english": "English",
+        "default_selected": "本游戏的默认语言为简体中文",
+        "chinese_selected": "已选择简体中文",
+        "english_selected": "Successfully selected English"
+    },
+    "menu_options": {
+        "language": "🌐语言/languages",
+        "shop": "商店",
+        "backpack": "背包",
+        "restart": "重来",
+        "uncrouch": "脱离卡点",
+        "switch_view": "切换人称",
+        "bug_report": "bug反馈",
+        "mute_chat": "禁言玩家说话",
+        "donate": "✨用爱，发电！",
+        "admin_tools": "管理员工具",
+        "attachment_select": "选择附图"
+    },
+    "player_titles": {
+        "player": "玩家",
+        "admin": "管理员",
+        "senior_admin": "高级管理员"
+    },
+    "skins": {
+        "default": "原版皮肤",
+        "default_using": "原版"
+    },
+    "items": {
+        "fly_privilege": "一次性飞行特权",
+        "fly_speed": "一次性飞行变速器",
+        "shrink_potion": "一次性缩小药水",
+        "restore_potion": "一次性还原药水",
+        "enlarge_potion": "一次性放大药水",
+        "infinite_fly": "无限飞行羽翼"
+    },
+    "leaderboard": {
+        "title": "排行",
+        "exp_unit": "经验",
+        "time_note": "注意：为了保证正确排序，10000-排行榜显示数据为真实用时",
+        "rank_format": "第{{rank}}名 | {{name}} | {{value}} {{unit}}{{name_display}}"
+    },
+    "dimension": {
+        "black": "黑",
+        "white": "白"
+    },
+    "chat": {
+        "welcome_join": "欢迎{{title}}{{name}} 加入时之灯！\n当前在线：{{online_count}}人",
+        "victory": "恭喜{{name}} 到达终点，用时{{time}}秒",
+        "title_prefix": " [{{title}}] ",
+        "purchase_green_particle": "{{name}} 购买了一次性绿色粒子效果体验！",
+        "purchase_permanent_green_particle": "{{name}} 购买了永久绿色粒子效果！",
+        "purchase_exp": "{{name}} 购买了{{exp}}经验！"
+    },
+    "logs": {
+        "join": "加入",
+        "purchase_green_particle": "购买了一次性绿色粒子效果体验",
+        "purchase_permanent_green_particle": "购买了永久绿色粒子效果",
+        "purchase_exp": "购买了{{exp}}经验"
+    },
+    "client" : {
+        "dimension" : "维度：",
+        "only_storage_included" : "(不包含代码管理员)",
+        "time" : "剩余时间：",
+        "message" : "世界消息：",
+        "adminlevel" : "管理员等级（越高越好）：",
+        "exp" : "南瓜："
+    },
+    "lang" : "zh-CN"
+}

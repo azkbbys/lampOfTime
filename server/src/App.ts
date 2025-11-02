@@ -296,7 +296,7 @@ const gameArea = world.addZone({
     selector: "player",
     bounds: new GameBounds3(
         new GameVector3(0, 0, 12.5),
-        new GameVector3(126, 20, 126)
+        new GameVector3(126, 30, 126)
     ),
 });
 
@@ -382,6 +382,7 @@ world.onPress(async({button,entity})=>{
             title: i18n.t('dialogs.menu.menu', {lng: entity.lang}),
             content: i18n.t('dialogs.menu.basicinfo', {lng: entity.lang, exp:entity.exp, time:entity.timeleft, hp: entity.hp, maxhp: entity.maxHp, position: entity.position}),
             options:[/*i18n.t('menu_options.language', {lng: entity.lang}),*/
+                i18n.t('dialogs.menu.tutorial', {lng: entity.lang}),
                 i18n.t('dialogs.menu.redemption_code', {lng: entity.lang}),
                 i18n.t('dialogs.menu.data', {lng: entity.lang}),
                 i18n.t('dialogs.menu.leaderboard.pump', {lng: entity.lang}),
@@ -419,6 +420,9 @@ world.onPress(async({button,entity})=>{
         }
         else if(result.value==i18n.t('menu_options.donate', {lng: entity.lang})){
             entity.player.link(`https://afdian.com/a/azkbbys`, {isConfirm: false, isNewTab: true})
+        }
+        else if(result.value==i18n.t('dialogs.menu.tutorial', {lng: entity.lang})){
+            dialog_with_button(entity,i18n.t('dialogs.menu.tutorial', {lng: entity.lang}),i18n.t('dialogs.tutorial', { lng: entity.lang, name: entity.player.name }),[i18n.t('dialogs.close', { lng: entity.lang })]);
         }
         // else if(result.value=='��音乐��'){
         //     const result = await entity.player.dialog({
@@ -1016,4 +1020,76 @@ big_pumpkin_mesh.forEach((pe)=>{
         e.opened_pump.push(pe)
         e.timeleft+=15
     })
+})
+
+// 商城
+world.onPlayerPurchaseSuccess(({tick, userId, productId, orderId})=>{
+    console.log(tick,userId,productId,orderId)
+    // if(productId==383036030006633){
+    //     world.querySelectorAll('player').forEach((e)=>{
+    //         if(e.player.userId==userId){
+    //             world.say(i18n.t('chat.purchase_green_particle', {lng: e.lang, name: e.player.name}))
+    //             log(i18n.t('logs.purchase_green_particle', {lng: e.lang}),e)
+    //             Object.assign(e, particle_greenCrystal)
+    //             dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+    //         }
+    //     })
+    // }
+    // else if(productId==383030300586724){
+    //     world.querySelectorAll('player').forEach((e)=>{
+    //         if(e.player.userId==userId){
+    //             world.say(i18n.t('chat.purchase_permanent_green_particle', {lng: e.lang, name: e.player.name}))
+    //             log(i18n.t('logs.purchase_permanent_green_particle', {lng: e.lang}),e)
+    //             e.greenlzxg=true;
+    //             dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_permanent_success', {lng: e.lang}),e)
+    //         }
+    //     })
+    // }
+    if(productId==383043785274227){// 少量南瓜
+        world.querySelectorAll('player').forEach((e)=>{
+            if(e.player.userId==userId){
+                world.say(i18n.t('chat.purchase_exp', {lng: e.lang, name: e.player.name, exp: 15}))
+                e.exp+=15;
+                dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+            }
+        })
+    }
+    else if(productId==383043785274232){// 一箱南瓜
+        world.querySelectorAll('player').forEach((e)=>{
+            if(e.player.userId==userId){
+                world.say(i18n.t('chat.purchase_exp', {lng: e.lang, name: e.player.name, exp: 100}))
+                e.exp+=100;
+                dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+            }
+        })
+    }
+    else if(productId==383043785273976){// 一瓶南瓜灯油
+        world.querySelectorAll('player').forEach((e)=>{
+            if(e.player.userId==userId){
+                e.timeleft+=10;
+                dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+            }
+        })
+    }
+    else if(productId==383043785273979){// 一罐南瓜灯油
+        world.querySelectorAll('player').forEach((e)=>{
+            if(e.player.userId==userId){
+                e.timeleft+=100;
+                dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+            }
+        })
+    }
+    else if(productId==383049581802779){// 一桶南瓜灯油
+        world.querySelectorAll('player').forEach((e)=>{
+            if(e.player.userId==userId){
+                e.timeleft+=1000;
+                dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.purchase_success', {lng: e.lang}),e)
+            }
+        })
+    }
+    // world.querySelectorAll('player').forEach((e)=>{
+    //     if(e.player.userId==userId){
+    //         dialog(i18n.t('dialogs.system', {lng: e.lang}),i18n.t('dialogs.save_reminder', {lng: e.lang}),e)
+    //     }
+    // })
 })

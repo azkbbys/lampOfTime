@@ -11,6 +11,13 @@ var lzxglist:string[] = []
 var lastmsg:string = ''
 
 //函数
+/**
+ * 对话框
+ * 
+ * @param title 
+ * @param content 
+ * @param entity 
+ */
 async function dialog(title:string,content:string,entity:GamePlayerEntity){
     const result = await entity.player.dialog({
         type: GameDialogType.TEXT,
@@ -18,6 +25,15 @@ async function dialog(title:string,content:string,entity:GamePlayerEntity){
         content: content,
     });
 }
+/**
+ * 带按钮的对话框
+ * 
+ * @param entity 
+ * @param title 
+ * @param content 
+ * @param options 
+ * @returns
+ */
 async function dialog_with_button(entity:GamePlayerEntity,title:string,content:string,options:string[]){
     let ret = await entity.player.dialog({
         type: GameDialogType.SELECT,
@@ -27,6 +43,12 @@ async function dialog_with_button(entity:GamePlayerEntity,title:string,content:s
     })
     return ret
 }
+/**
+ * 查找玩家
+ * 
+ * @param {string} name - 玩家名称
+ * @returns {GamePlayerEntity} 玩家实体
+ */
 function find(name:string){
     world.querySelectorAll('player').forEach((e)=>{
         if(e.player.name==name){
@@ -979,6 +1001,7 @@ world.onChat(({entity, message})=>{
 })
 
 // 实体交互
+// 将所有符合条件的模型添加标签
 world.querySelectorAll('*').forEach((e)=>{
     if(e.id.startsWith('南瓜')){
         e.addTag('南瓜')

@@ -154,6 +154,11 @@ async function loadPlayer(entity:GamePlayerEntity) { // 读档
             hour: hour,
             minute: minute
         }
+        
+        while(1){
+            let res = await dialog_with_button(entity,i18n.t('dialogs.welcome',{lng:entity.lang}),i18n.t('dialogs.welcome_new_player', { lng: entity.lang }),['1','2','3'])
+            if(res&&res.value=='2')break;
+        }
     };
     /*if(entity.lang==undefined){
         let lang = await entity.player.dialog({
@@ -301,7 +306,7 @@ gameArea.onEnter(({ entity }) => {
     e.playing = true;
     e.opened_pump = [];
     e.player.directMessage(i18n.t('directmsgs.enter_game_area', { lng: entity.lang }) );
-    e.timeleft = 30;
+    e.timeleft = 60;
     e.exp-=10
     if(e.exp<0){e.exp=0}
 });
@@ -339,7 +344,7 @@ const endGameArea = world.addZone({
 endGameArea.onEnter(({ entity }) => {
     let e = entity as GamePlayerEntity
     if(e.timeleft<2)return;
-    if(e.opened_pump.length<=5){
+    if(e.opened_pump.length<5){
         entity.player?.directMessage(i18n.t('directmsgs.exitfail', { lng: entity.lang }))
         e.position.set(111, 10, 18)
         return
@@ -353,7 +358,7 @@ endGameArea.onEnter(({ entity }) => {
 world.onTick(({ tick }) => {
     if(tick%16==0){
         world.querySelectorAll('player').forEach(entity => { 
-            remoteChannel.sendClientEvent(entity, { type: 'tick', args: [entity.opened_pump.length,entity.timeleft,lastmsg,entity.adminlevel,entity.exp] });
+            remoteChannel.sendClientEvent(entity, { type: 'tick', args: [entity.playing?entity.opened_pump.length:'未开始',entity.playing?entity.timeleft:'未开始',lastmsg,entity.adminlevel,entity.exp] });
             // entity.player.canFly=true
             if(entity.playing){
                 if(entity.timeleft>1){
@@ -975,6 +980,11 @@ world.querySelectorAll('*').forEach((e)=>{
         e.addTag('南瓜')
     }
 })
+world.querySelectorAll('*').forEach((e)=>{
+    if(e.id.startsWith('大南瓜')){
+        e.addTag('大南瓜')
+    }
+})
 const pumpkin_mesh = world.querySelectorAll('.南瓜')
 console.log(`找到${pumpkin_mesh.length}个南瓜实体`)
 pumpkin_mesh.forEach((pe)=>{
@@ -985,8 +995,25 @@ pumpkin_mesh.forEach((pe)=>{
         if(!entity.player)return;
         const e = entity as GamePlayerEntity
         if(e.opened_pump.includes(pe)){entity.player.directMessage(i18n.t('directmsgs.already_picked_pumpkin', {lng: entity.lang}));return};
-        e.player.directMessage(i18n.t('directmsgs.pickup_pumpkin', {lng: entity.lang, time: 5}));
+        e.player.directMessage(i18n.t('directmsgs.pickup_pumpkin', {lng: entity.lang, time: 5,n: 1}));
         e.opened_pump.push(pe)
         e.timeleft+=5
+    })
+})
+const big_pumpkin_mesh = world.querySelectorAll('.大南瓜')
+console.log(`找到${big_pumpkin_mesh.length}个大南瓜实体`)
+big_pumpkin_mesh.forEach((pe)=>{
+    pe.enableInteract=true;
+    pe.interactHint='拾取南瓜';
+    pe.interactRadius=3;
+    pe.onInteract(({entity})=>{
+        if(!entity.player)return;
+        const e = entity as GamePlayerEntity
+        if(e.opened_pump.includes(pe)){entity.player.directMessage(i18n.t('directmsgs.already_picked_pumpkin', {lng: entity.lang}));return};
+        e.player.directMessage(i18n.t('directmsgs.pickup_big_pumpkin', {lng: entity.lang, time: 15, n: 3}));
+        e.opened_pump.push(pe)
+        e.opened_pump.push(pe)
+        e.opened_pump.push(pe)
+        e.timeleft+=15
     })
 })

@@ -1,9 +1,4 @@
 {
-  "welcome_game": "Welcome to the BOX3 Game!",
-  "welcome_ap": "Welcome to ArenaPro!",
-  "navigator": {
-    "language": "You are using {{language}}"
-  },
   "chat": {
     "purchase_exp": "{{name}} purchased {{exp}} pumpkin!",
     "purchase_green_particle": "{{name}} purchased a one-time green particle effect experience!",
@@ -81,7 +76,6 @@
       "open": "Open gameUi",
       "refresh": "Refresh gameUi size"
     },
-    "joinwelcome": "{{name}}, welcome to the Lamp of Time!\n\nWhen you enter the challenge area, you need to collect enough pumpkins before the countdown ends to continue the jack-o'-lantern duration and return before the jack-o'-lantern burns out. Only in this way can the evacuation be considered successful and the score will be calculated.",
     "menu": {
       "basicinfo": "You have {{exp}} pumpkin\n\nYou have spent {{time}} seconds\n\nYour HP: {{hp}}/{{maxhp}}\n\nYour coordinates: {{position}}",
       "data": "Data related",
@@ -140,7 +134,9 @@
     },
     "system": "system",
     "uncrouch_banned": "You are in lockdown and cannot come out",
-    "welcome": "welcome"
+    "welcome": "welcome",
+    "joinwelcome": "{{name}}, welcome to the Lamp of Time!\n\nWhen you enter the challenge area, you need to collect enough pumpkins before the countdown ends to continue the jack-o'-lantern duration and return before the jack-o'-lantern burns out. Only in this way can the evacuation be considered successful and the score will be calculated.\n\nFor detailed rules, please right click - Tutorial View",
+    "welcome_new_player": "New players are welcome to join! \nPlease watch this tutorial carefully to learn how to play the game!\n\nThere is a portal next to the birth point. When you enter the portal, you can spend 10 pumpkins to start the game. You can collect them by interacting with large and small pumpkins on the map. \nYou only have 60 seconds initially. Picking up a small pumpkin can add 5 seconds to the time. Picking up a big pumpkin is equivalent to picking up 3 small pumpkins. \nGet back and enter the portal before time runs out! \nOtherwise the reward will be forfeited.\n\nPS: You need to pick up at least 5 pumpkins to evacuate~\n\nPress the \"2\" button below to continue"
   },
   "dimension": {
     "black": "black",
@@ -160,7 +156,6 @@
     "fly_speed_used": "Used successfully",
     "infinite_fly_used": "Used successfully",
     "opened": "Opened successfully",
-    "pickup_pumpkin": "You picked up a pumpkin, and the jack-o'-lantern lasts for {{time}} seconds!",
     "potion_used": "Used successfully",
     "purchase_success_backpack": "The purchase was successful and has been placed in the backpack",
     "purchase_success_particle": "The purchase was successful and has been used automatically. It will take effect after refreshing.",
@@ -175,7 +170,9 @@
     "time_up": "Time's up! \nIf you fail to evacuate successfully, your results will be invalid!",
     "timer_max": "Timed up to 3 hours",
     "timer_stopped": "The timer is off!",
-    "uncrouch_success": "Escape successfully!"
+    "uncrouch_success": "Escape successfully!",
+    "pickup_big_pumpkin": "You picked up a big pumpkin, and the jack-o'-lantern lasts for {{time}} seconds! \n, pumpkin {{n}}!",
+    "pickup_pumpkin": "You picked up a pumpkin. The jack-o-lantern lasts {{time}} seconds and the pumpkin {{n}}!"
   },
   "items": {
     "enlarge_potion": "One-time magnification potion",

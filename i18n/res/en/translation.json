@@ -85,7 +85,8 @@
       },
       "menu": "menu",
       "redemption_code": "Redeem code",
-      "skin": "skin library"
+      "skin": "skin library",
+      "tutorial": "Tutorial"
     },
     "mute_chat": {
       "content": "what do you want to say",
@@ -136,7 +137,8 @@
     "uncrouch_banned": "You are in lockdown and cannot come out",
     "welcome": "welcome",
     "joinwelcome": "{{name}}, welcome to the Lamp of Time!\n\nWhen you enter the challenge area, you need to collect enough pumpkins before the countdown ends to continue the jack-o'-lantern duration and return before the jack-o'-lantern burns out. Only in this way can the evacuation be considered successful and the score will be calculated.\n\nFor detailed rules, please right click - Tutorial View",
-    "welcome_new_player": "New players are welcome to join! \nPlease watch this tutorial carefully to learn how to play the game!\n\nThere is a portal next to the birth point. When you enter the portal, you can spend 10 pumpkins to start the game. You can collect them by interacting with large and small pumpkins on the map. \nYou only have 60 seconds initially. Picking up a small pumpkin can add 5 seconds to the time. Picking up a big pumpkin is equivalent to picking up 3 small pumpkins. \nGet back and enter the portal before time runs out! \nOtherwise the reward will be forfeited.\n\nPS: You need to pick up at least 5 pumpkins to evacuate~\n\nPress the \"2\" button below to continue"
+    "welcome_new_player": "New players are welcome to join! \nPlease watch this tutorial carefully to learn how to play the game!\n\nThere is a portal next to the birth point. When you enter the portal, you can spend 10 pumpkins to start the game. You can collect them by interacting with large and small pumpkins on the map. \nYou only have 60 seconds initially. Picking up a small pumpkin can add 5 seconds to the time. Picking up a big pumpkin is equivalent to picking up 3 small pumpkins. \nGet back and enter the portal before time runs out! \nOtherwise the reward will be forfeited.\n\nPS: You need to pick up at least 5 pumpkins to evacuate~\n\nPress the \"2\" button below to continue",
+    "tutorial": "Please watch this tutorial carefully to learn how to play the game!\n\nThere is a portal next to the birth point. When you enter the portal, you can spend 10 pumpkins to start the game. You can collect them by interacting with large and small pumpkins on the map. \nYou only have 60 seconds initially. Picking up a small pumpkin can add 5 seconds to the time. Picking up a big pumpkin is equivalent to picking up 3 small pumpkins. \nGet back and enter the portal before time runs out! \nOtherwise the reward will be forfeited.\n\nPS: You need to pick up at least 5 pumpkins to evacuate~"
   },
   "dimension": {
     "black": "black",
@@ -149,7 +151,6 @@
     "data_loaded": "The data has been read for you!",
     "enter_game_area": "The timer begins!",
     "exitfail": "Evacuation failed! \nYou need to collect at least 5 pumpkins to evacuate!",
-    "exitsuccess": "Evacuation successful! \nYou collected {{pump_num}} pumpkins this round!",
     "fly_disabled": "Successful landing",
     "fly_enabled": "You are ready to fly",
     "fly_privilege_used": "Used successfully, landed after 2 seconds",
@@ -167,12 +168,13 @@
     "temp_chat_created": "Created successfully! \n{{users}}. \nThe ID is {{id}}",
     "temp_chat_destroyed": "Destruction successful! \n{{id}}",
     "time_left": "{{time}} seconds left!",
-    "time_up": "Time's up! \nIf you fail to evacuate successfully, your results will be invalid!",
     "timer_max": "Timed up to 3 hours",
     "timer_stopped": "The timer is off!",
     "uncrouch_success": "Escape successfully!",
     "pickup_big_pumpkin": "You picked up a big pumpkin, and the jack-o'-lantern lasts for {{time}} seconds! \n, pumpkin {{n}}!",
-    "pickup_pumpkin": "You picked up a pumpkin. The jack-o-lantern lasts {{time}} seconds and the pumpkin {{n}}!"
+    "pickup_pumpkin": "You picked up a pumpkin. The jack-o-lantern lasts {{time}} seconds and the pumpkin {{n}}!",
+    "exitsuccess": "Evacuation successful! \nYou collected {{pump_num}} pumpkins this round! \n, the jack-o-lantern will continue to burn!",
+    "time_up": "Time's up! \nThe jack-o'-lantern is out..."
   },
   "items": {
     "enlarge_potion": "One-time magnification potion",
